@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 200vh; /* Ensure enough height to scroll */
+  overflow-x: hidden;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 1s ease-out; /* Only opacity transition */
+  opacity: 0; /* Initially hidden */
+}
+
+#text1 {
+  z-index: 1;
+  opacity: 1; /* Make text 1 visible initially */
+}
+
+#text2 {
+  z-index: 0;
+}
+
+.text-visible {
+  opacity: 1 !important;
+}
